@@ -1,0 +1,9 @@
+# scrollbar style - rxvt (default), plain, next, or xterm
+URxvt.perl-lib: /home/leonid/.urxvt
+URxvt*scrollstyle: plain
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=14
+URxvt.perl-ext-common: default,matcher
+URxvt.background: black
+URxvt.foreground: lightgray
+
+

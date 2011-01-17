@@ -1,0 +1,52 @@
+[user]
+  name = Leonid Shevtsov
+  email = leonid@shevtsov.me
+
+[color]
+  ui = auto
+[color "branch"]
+  current = blue reverse
+  local = blue
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green
+  changed = blue
+  untracked = red
+
+  
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+
+
+#[diff]
+#  external = /home/user/bin/meld.sh
+#[merge]
+#  tool = meld
+#[mergetool "diffmerge"]
+#  cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+#  trustExitCode = false
+[github]
+  user = leonid-shevtsov
+  token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+
+[push]
+  default = current
+[giggle]
+  main-window-maximized = true
+  main-window-geometry = 435x260+295+25
+  main-window-view = HistoryView
+  history-view-vpane-position = 335
+  file-view-vpane-position = 706
+  file-view-hpane-position = 312
+[core]
+  excludesfile = /home/user/.gitignore

@@ -1,0 +1,7 @@
+*.*.sw*
+*.pyc
+*~
+
+.idea
+.DS_Store
+nbproject

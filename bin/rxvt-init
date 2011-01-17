@@ -1,0 +1,2 @@
+#!/bin/sh
+infocmp rxvt-unicode | ssh $1 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"

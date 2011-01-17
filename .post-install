@@ -1,0 +1,4 @@
+#!/bin/sh
+# Executed at the end of rake install
+
+~/.vim/update-bundles

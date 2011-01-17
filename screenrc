@@ -1,0 +1,32 @@
+shell -${SHELL}
+caption always "%n(%t) : %C"
+defscrollback 1024
+startup_message off
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+altscreen on
+vbell off
+
+
+term screen-256color
+terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+termcapinfo rxvt-unicode ti@:te@
+
+
+#backtick 1 5 5 true
+#termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
+#hardstatus string "screen (%n: %t)"
+#caption string "%{= kw}%Y-%m-%d;%c %{= kw}%-Lw%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+Lw%1`"
+#caption always
+
+# Start with screen 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
+
+bindkey ^[[d prev
+bindkey ^[[c next
+bindkey ^[[a title
+bindkey ^[[b screen 1
