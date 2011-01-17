@@ -30,8 +30,7 @@ task :install do
       link_file(file)
     end
   end
-
-  `.post-install`
+  exec './.post-install'
 end
 
 def replace_file(file)
