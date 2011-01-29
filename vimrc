@@ -96,8 +96,8 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplUseSingleClick = 1
 
 " ctrl+tab / ctrl+shift+tab switches buffers
-noremap <C-S-tab> :bprev<CR>
 noremap <C-tab> :bnext<CR> 
+noremap <C-S-tab> :bprev<CR>
 
 let mapleader=" "
 
@@ -134,9 +134,9 @@ let mapleader=" "
 " # BUNDLE: git://github.com/msanders/snipmate.vim.git
 " # BUNDLE: git://github.com/scrooloose/snipmate-snippets.git
 " # BUNDLE: git://github.com/tsaleh/vim-align.git
-" BUNDLE: git://github.com/tpope/vim-endwise.git
+" # BUNDLE: git://github.com/tpope/vim-endwise.git
 " # BUNDLE: git://github.com/tpope/vim-repeat.git
-" # BUNDLE: git://github.com/tpope/vim-fugitive.git
+" BUNDLE: git://github.com/tpope/vim-fugitive.git
 " # BUNDLE: git://github.com/tsaleh/vim-supertab.git
 " # BUNDLE: git://github.com/bronson/vim-jquery.git # is not available anymore
 " BUNDLE: git://github.com/vim-scripts/jQuery.git

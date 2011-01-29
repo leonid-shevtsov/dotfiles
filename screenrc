@@ -1,5 +1,5 @@
 shell -${SHELL}
-caption always "%n(%t) : %C"
+caption always "%n(%t)"
 defscrollback 1024
 startup_message off
 hardstatus off
