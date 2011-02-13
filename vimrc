@@ -95,18 +95,16 @@ set langmap=ёйцукенгшщзхъфывапролджэячсмитьбю;`
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplUseSingleClick = 1
 
-" ctrl+tab / ctrl+shift+tab switches buffers
-noremap <C-tab> :bnext<CR> 
-noremap <C-S-tab> :bprev<CR>
-
 let mapleader=" "
+
+nmap <silent> <F3> :NERDTreeToggle<CR>
 
 
 " Enable some plugins or add some of your own!
 " Remove any text (like the '#') before BUNDLE to enable a plugin.
 
 " Generally Useful:
-" # BUNDLE: git://github.com/scrooloose/nerdtree.git
+" BUNDLE: git://github.com/scrooloose/nerdtree.git
 " # BUNDLE: git://github.com/bronson/vim-bufexplorer.git
 " # BUNDLE: git://github.com/bronson/Command-T.git
 " # BUNDLE: git://github.com/bronson/vim-closebuffer.git
