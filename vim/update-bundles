@@ -15,11 +15,17 @@
 require 'fileutils'
 require 'open-uri'
 
-
-def dotvim *path
-  File.join ENV['HOME'], '.vim', *path
+def is_windows?
+  RUBY_PLATFORM =~ /win32/
 end
 
+def dotvim *path
+  File.join ENV['HOME'], (is_windows? ? 'vimfiles' : '.vim'), *path
+end
+
+def vimrc
+  File.join ENV['HOME'], (is_windows? ? '_vimrc' : '.vimrc')
+end
 
 def ensure_dir dir
   Dir.mkdir dir unless test ?d, dir
@@ -29,7 +35,7 @@ end
 def print_bundle dir, doc
   version = date = ''
   FileUtils.cd(dir) do
-    version = `git describe --tags 2>/dev/null`.chomp
+    version = `git describe --tags 2>#{is_windows? ? 'NUL' : '/dev/null'}`.chomp
     version = "n/a" if version == ''
     date = `git log -1 --pretty=format:%ai`.chomp
   end
@@ -66,7 +72,7 @@ end
 
 
 def read_vimrc
-  File.open("#{ENV['HOME']}/.vimrc") do |file|
+  File.open(vimrc) do |file|
     file.each_line { |line| yield line }
   end
 end
@@ -122,30 +128,9 @@ def update_bundles_and_docs
   end
 end
 
-
-def create_new_vim_environment
-  puts 'Creating a new Vim environment.'
-
-  puts "Downloading default vimrc..."
-  ensure_dir dotvim
-  download_file "http://github.com/bronson/vim-update-bundles/raw/master/vimrc-starter", dotvim('vimrc')
-  `ln -s '#{dotvim 'vimrc'}' '#{ENV['HOME']}/.vimrc'`
-
-  puts "Downloading Pathogen..."
-  ensure_dir dotvim('autoload')
-  download_file "http://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim", dotvim('autoload', 'pathogen.vim')
-
-  puts 'Done!  Now edit your ~/.vimrc file.'
-end
-
-
-if ensure_dir dotvim
-  create_new_vim_environment
-else
-  ensure_dir dotvim('doc')
-  update_bundles_and_docs
-  puts "updating helptags..."
-  `vim -e -c "call pathogen#helptags()" -c q`
-  puts "done!  Start Vim and type ':help bundles' to see what you have installed."
-end
+ensure_dir dotvim('doc')
+update_bundles_and_docs
+puts "updating helptags..."
+`vim -e -c "call pathogen#helptags()" -c q`
+puts "done!  Start Vim and type ':help bundles' to see what you have installed."
 
