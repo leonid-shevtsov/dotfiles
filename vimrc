@@ -1,4 +1,5 @@
 " Avoid abbreviations!  Spelling everything out makes grepping easy.
+set encoding=utf-8
 
 " Pathogen
 filetype off

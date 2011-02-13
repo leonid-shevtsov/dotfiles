@@ -60,7 +60,11 @@ task :install do
 end
 
 def replace_file(file, target_file)
-  FileUtils.rm_rf target_file
+  if is_windows? && File.directory?(target_file)
+    system %Q{rmdir /s /q "#{target_file}"}
+  else
+    FileUtils.rm_rf target_file
+  end
   link_file file, target_file
 end
 
@@ -73,8 +77,7 @@ def link_file(file, target_file)
   else
     puts "linking #{target_file}"
     if is_windows?
-      system %Q{mklink #{File.directory?(file) ? '/d ' : ''} "#{target_file}" "#{Dir.pwd}/#{file}"}
-      puts %Q{mklink #{File.directory?(file) ? '/d ' : ''} "#{target_file}" "#{Dir.pwd}/#{file}"}
+      system %Q{cmd /c mklink #{File.directory?(file) ? '/d ' : ''} "#{target_file.gsub('/','\\')}" "#{File.join(Dir.pwd,file).gsub('/','\\')}"}
     else
       system %Q{ln -s "$PWD/#{file}" "#{target_file}"}
     end
