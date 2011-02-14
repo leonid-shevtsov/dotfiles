@@ -6,5 +6,3 @@ end
 
 set guioptions=ceir
 set linespace=3
-
-color mayansmoke

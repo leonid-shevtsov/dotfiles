@@ -61,6 +61,8 @@ set incsearch
 set showmatch
 set hlsearch
 
+colorscheme fokus
+
 "
 
 " Useful Rails commands
@@ -125,6 +127,7 @@ nmap <silent> <F3> :NERDTreeToggle<CR>
 " Color schemes:
 " BUNDLE: git://github.com/tpope/vim-vividchalk.git
 " BUNDLE: git://github.com/vim-scripts/mayansmoke.git
+" BUNDLE: git://github.com/vim-scripts/fokus.git
 
 " Programming:
 " BUNDLE: git://github.com/scrooloose/nerdcommenter.git
