@@ -26,6 +26,10 @@ alias cuke='bundle exec cucumber -f pretty -p'
 alias b='bundle'
 alias be='bundle exec'
 
+gem-ack(){ ack $1 `bundle show $2` }
+gem-vim(){ cd `bundle show $1` && gvim}
+
+
 calc(){ awk "BEGIN{ print $* }" ;}
 
 

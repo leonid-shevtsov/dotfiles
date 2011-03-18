@@ -88,10 +88,6 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column --type-set=haml=.haml --t
 set statusline=%<%f%h%m%r%=format=%{&fileformat}\ file=%{&fileencoding}\ enc=%{&encoding}\ %b\ 0x%B\ %l,%c%V\ %P
 set laststatus=2
 
-" set incsearch         " find the next match as we type the search
-" set hlsearch          " hilight searches by default
-" etc.  See http://github.com/bronson/vimsy/blob/master/vimrc for inspiration
-
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl\;'zxcvbnm\,.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>
 
 " minibufexplorer configuration
@@ -101,6 +97,11 @@ let g:miniBufExplUseSingleClick = 1
 let mapleader=" "
 
 nmap <silent> <F3> :NERDTreeToggle<CR>
+nmap <silent> <F4> :TlistToggle<CR>
+
+" syntastic configuration
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
 
 
 " Enable some plugins or add some of your own!
@@ -123,7 +124,10 @@ nmap <silent> <F3> :NERDTreeToggle<CR>
 " # BUNDLE: git://github.com/vim-scripts/bufexplorer.zip.git
 " BUNDLE: git://github.com/vim-scripts/LustyJuggler.git
 " BUNDLE: git://github.com/vim-scripts/YankRing.vim.git
-"
+" BUNDLE: git://github.com/vim-scripts/AutoTag.git
+" BUNDLE: git://github.com/vim-scripts/taglist.vim.git
+" BUNDLE: git://github.com/scrooloose/syntastic.git
+ 
 " Color schemes:
 " BUNDLE: git://github.com/tpope/vim-vividchalk.git
 " BUNDLE: git://github.com/vim-scripts/mayansmoke.git
