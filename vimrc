@@ -61,6 +61,11 @@ set incsearch
 set showmatch
 set hlsearch
 
+" Folding
+" set foldmethod=syntax
+" set foldcolumn=3 " classes and methods; should be enough
+" set foldnestmax=3
+
 colorscheme fokus
 
 "
