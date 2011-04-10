@@ -1,10 +1,29 @@
-# scrollbar style - rxvt (default), plain, next, or xterm
+URxvt.termName: rxvt-256color
 URxvt.perl-lib: /home/leonid/.urxvt
 URxvt.scrollstyle: plain
 URxvt.font: xft:DejaVu Sans Mono:pixelsize=14
-URxvt.boldfont: xft:DejaVu Sans Mono:pixelsize=14
+URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=14
 URxvt.letterSpace: -1
 URxvt.perl-ext-common: default,matcher
-URxvt.background: black
-URxvt.foreground: lightgray
 URxvt.skipBuiltinGlyphs: true
+
+
+URxvt*foreground: #f2f2f2
+URxvt*background: #101010
+URxvt*color0: #101010
+URxvt*color1: #f13a21
+URxvt*color2: #93f91d
+URxvt*color3: #ffd00a
+URxvt*color4: #004f9e
+URxvt*color5: #ec0048
+URxvt*color6: #2aa7e7
+URxvt*color7: #f2f2f2
+URxvt*color8: #1d202f
+URxvt*color9: #ff361e
+URxvt*color10: #ffc005
+URxvt*color11: #93ff00
+URxvt*color12: #0071ff
+URxvt*color13: #ef0051
+URxvt*color14: #4bb8fd
+URxvt*color15: #a020f0
+

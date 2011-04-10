@@ -8,10 +8,9 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 altscreen on
 vbell off
 
-
-term screen-256color
-terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-termcapinfo rxvt-unicode ti@:te@
+#term screen-256color
+#terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#termcapinfo rxvt-unicode ti@:te@
 
 
 #backtick 1 5 5 true
