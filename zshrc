@@ -38,8 +38,8 @@ export PATH=/home/leonid/bin:/opt/ruby-enterprise/bin:/usr/local/sbin:/usr/local
 export EDITOR=/usr/bin/vim
 # export TERM=xterm-256color
 #
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-export LESS=' -R '
+#export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+#export LESS=' -R '
 
 unsetopt auto_name_dirs
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

@@ -1,4 +1,3 @@
-" Avoid abbreviations!  Spelling everything out makes grepping easy.
 set encoding=utf-8
 
 " Pathogen
@@ -7,9 +6,7 @@ call pathogen#runtime_append_all_bundles()
 filetype indent plugin on
 
 
-" Now you have a working Vim setup.  Customize everything from here on.
-
-" set some directives...
+" Everything else 
 syntax on
 set nocompatible
 set modelines=0
@@ -25,9 +22,8 @@ set autoread
 "
 set noswapfile
 
-" show whitespace
-set listchars=tab:→\ ,trail:·,eol:¬
-set list
+" do not show whitespace
+set nolist
 
 
 " set cursorline
@@ -66,7 +62,22 @@ set hlsearch
 " set foldcolumn=3 " classes and methods; should be enough
 " set foldnestmax=3
 
-colorscheme fokus
+let g:solarized_style="dark"
+colorscheme solarized
+
+function! ToggleBackground()
+  if (g:solarized_style=="dark")
+    let g:solarized_style="light"
+  else
+    let g:solarized_style="dark"
+  endif
+  colorscheme solarized
+endfunction
+command! Togbg call ToggleBackground()
+nnoremap <F12> :call ToggleBackground()<CR>
+inoremap <F12> <ESC>:call ToggleBackground()<CR>a
+vnoremap <F12> <ESC>:call ToggleBackground()<CR>
+
 
 "
 
@@ -108,8 +119,17 @@ nmap <silent> <F4> :TlistToggle<CR>
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
+" ultisnips
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+if has('win32') || has ('win64')
+  let g:UltiSnipsSnippetDirectories=[$HOME."\vimfiles\snippets"]
+else
+  let g:UltiSnipsSnippetDirectories=[$HOME."/.vim/snippets"]
+endif
 
-" Enable some plugins or add some of your own!
+
+
 " Remove any text (like the '#') before BUNDLE to enable a plugin.
 
 " Generally Useful:
@@ -137,6 +157,7 @@ let g:syntastic_auto_loc_list=1
 " BUNDLE: git://github.com/tpope/vim-vividchalk.git
 " BUNDLE: git://github.com/vim-scripts/mayansmoke.git
 " BUNDLE: git://github.com/vim-scripts/fokus.git
+" BUNDLE: git://github.com/altercation/vim-colors-solarized.git
 
 " Programming:
 " BUNDLE: git://github.com/scrooloose/nerdcommenter.git
@@ -144,6 +165,8 @@ let g:syntastic_auto_loc_list=1
 " # BUNDLE: git://github.com/vim-scripts/taglist.vim
 " # BUNDLE: git://github.com/msanders/snipmate.vim.git
 " # BUNDLE: git://github.com/scrooloose/snipmate-snippets.git
+" # BUNDLE-COMMAND: rake deploy_local
+" BUNDLE: git://github.com/rygwdn/ultisnips.git
 " # BUNDLE: git://github.com/tsaleh/vim-align.git
 " # BUNDLE: git://github.com/tpope/vim-endwise.git
 " # BUNDLE: git://github.com/tpope/vim-repeat.git
