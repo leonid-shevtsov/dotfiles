@@ -119,13 +119,16 @@ nmap <silent> <F4> :TlistToggle<CR>
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
-" ultisnips
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" ultisnips and snipmate config
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:snips_author = 'Leonid Shevtsov'
 if has('win32') || has ('win64')
   let g:UltiSnipsSnippetDirectories=[$HOME."\vimfiles\snippets"]
+  let g:snippets_dir=$HOME."\vimfiles\snippets"
 else
   let g:UltiSnipsSnippetDirectories=[$HOME."/.vim/snippets"]
+  let g:snippets_dir=$HOME."/.vim/snippets"
 endif
 
 
@@ -163,10 +166,11 @@ endif
 " BUNDLE: git://github.com/scrooloose/nerdcommenter.git
 " BUNDLE: git://github.com/tpope/vim-surround.git
 " # BUNDLE: git://github.com/vim-scripts/taglist.vim
-" # BUNDLE: git://github.com/msanders/snipmate.vim.git
+" BUNDLE: git://github.com/msanders/snipmate.vim.git
 " # BUNDLE: git://github.com/scrooloose/snipmate-snippets.git
 " # BUNDLE-COMMAND: rake deploy_local
-" BUNDLE: git://github.com/rygwdn/ultisnips.git
+" # BUNDLE: git://github.com/vim-scripts/UltiSnips.git
+" # BUNDLE-COMMAND: rm -rf UltiSnips && ln -fs ~/.vim/snippets UltiSnips
 " # BUNDLE: git://github.com/tsaleh/vim-align.git
 " # BUNDLE: git://github.com/tpope/vim-endwise.git
 " # BUNDLE: git://github.com/tpope/vim-repeat.git
