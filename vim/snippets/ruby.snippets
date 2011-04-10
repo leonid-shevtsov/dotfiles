@@ -1,23 +1,23 @@
 snippet class
 	class ${1:ClassName}
-		$0
+		${2}
 	end
 
 snippet def
 	def ${1:method_name}
-		$0
+		${2}
 	end
 
 snippet defs
 	def self.${1:method_name}
-		$0
+		${2}
 	end
 
 snippet model
 	  #
 		# Associations
 	  #
-		$0
+		${1}
 
 		#
 		# Attributes
@@ -52,12 +52,12 @@ snippet feature
 	require 'acceptance/acceptance_helper'
 	feature "${1:Feature name}" do
 		background do
-			$0
+			${2}
 		end
 
 	end
 
 snippet scenario
 	scenario "${1:Scenario}" do
-		$0
+		${2}
 	end
