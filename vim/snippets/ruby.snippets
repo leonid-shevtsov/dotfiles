@@ -13,40 +13,58 @@ snippet defs
 		${2}
 	end
 
-snippet model
-	  #
-		# Associations
-	  #
+snippet defa
+	def ${1:abstract_method}
+	  raise NotImplementedError
+	end
+	${2}
+
+snippet do
+	do
 		${1}
+	end
 
-		#
-		# Attributes
-		#
+snippet rescue
+	begin
+		${2}
+	rescue ${1}
+		raise $!
+	end
+
+snippet model
+	#
+	# Associations
+	#
+	${1}
+
+	#
+	# Attributes
+	#
 
 
-		#
-		# Scopes
-		#
+	#
+	# Scopes
+	#
 
 
-		#
-		# Validation
-		#
+	#
+	# Validation
+	#
 
 
-		#
-		# Class methods
-		#
+	#
+	# Class methods
+	#
 
 
-		#
-		# API
-		#
+	#
+	# API
+	#
 
-		protected
-		#
-		# Implementation
-		#
+protected
+#
+# Implementation
+#
 
 snippet feature
 	require 'acceptance/acceptance_helper'
@@ -59,5 +77,20 @@ snippet feature
 
 snippet scenario
 	scenario "${1:Scenario}" do
+		${2}
+	end
+
+snippet namespace
+	namespace :${1:db} do
+		${2}
+	end
+
+snippet task
+	task :${1:task} do
+		${2}
+	end
+
+snippet taske
+	task :${1:task} => :environment do
 		${2}
 	end

@@ -116,6 +116,15 @@ else
   let g:snippets_dir=$HOME."/.vim/snippets"
 endif
 
+" convert line endings
+"
+function! LineEndings()
+  update
+  edit ++ff=dos
+  setlocal ff=unix  
+  write
+endfunction
+
 
 
 " Remove any text (like the '#') before BUNDLE to enable a plugin.
@@ -185,4 +194,8 @@ endif
 " # BUNDLE: git://github.com/taq/vim-rspec.git
 " BUNDLE: git://github.com/mattn/gist-vim.git
 " BUNDLE: git://github.com/csexton/rvm.vim.git
-"
+
+" C++ Programming:
+" BUNDLE: git://github.com/vim-scripts/OmniCppComplete.git
+" BUNDLE: git://github.com/vim-scripts/indexer.tar.gz.git
+" BUNDLE: git://github.com/vim-scripts/FSwitch.git
