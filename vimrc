@@ -125,7 +125,10 @@ function! LineEndings()
   write
 endfunction
 
-
+"
+" vimwiki
+"
+let g:vimwiki_use_mouse=1
 
 " Remove any text (like the '#') before BUNDLE to enable a plugin.
 
@@ -146,9 +149,10 @@ endfunction
 " # BUNDLE: git://github.com/vim-scripts/bufexplorer.zip.git
 " BUNDLE: git://github.com/vim-scripts/LustyJuggler.git
 " BUNDLE: git://github.com/vim-scripts/YankRing.vim.git
-" BUNDLE: git://github.com/vim-scripts/AutoTag.git
+" # BUNDLE: git://github.com/vim-scripts/AutoTag.git
 " BUNDLE: git://github.com/vim-scripts/taglist.vim.git
 " BUNDLE: git://github.com/scrooloose/syntastic.git
+" BUNDLE: git://github.com/vim-scripts/vimwiki.git
  
 " Color schemes:
 " BUNDLE: git://github.com/tpope/vim-vividchalk.git
