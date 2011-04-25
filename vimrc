@@ -129,6 +129,12 @@ endfunction
 " vimwiki
 "
 let g:vimwiki_use_mouse=1
+if has('win32')
+  " use default Windows browser to handle URLs
+  function! VimwikiWeblinkHandler(weblink)
+    execute '!start ' . a:weblink
+  endfunction
+end
 
 " Remove any text (like the '#') before BUNDLE to enable a plugin.
 
