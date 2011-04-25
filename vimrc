@@ -132,7 +132,7 @@ let g:vimwiki_use_mouse=1
 if has('win32')
   " use default Windows browser to handle URLs
   function! VimwikiWeblinkHandler(weblink)
-    execute '!start ' . a:weblink
+    execute 'silent ! start ' . a:weblink
   endfunction
 end
 
