@@ -1,15 +1,9 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
-
-# Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="geoffgarside-no-name"
-
 plugins=(git ruby rails gem cap command-not-found github)
 
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="false"
-#
 source /etc/profile
 source $ZSH/oh-my-zsh.sh
 
@@ -29,21 +23,4 @@ alias be='bundle exec'
 gem-ack(){ ack $1 `bundle show $2` }
 gem-vim(){ cd `bundle show $1` && gvim}
 
-
-calc(){ awk "BEGIN{ print $* }" ;}
-
-
-# Customize to your needs...
-export PATH=/home/leonid/bin:/opt/ruby-enterprise/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-export EDITOR=/usr/bin/vim
-# export TERM=xterm-256color
-#
-#export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-#export LESS=' -R '
-
-unsetopt auto_name_dirs
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-function git(){hub "$@"}
-
-eval "ssh-agent" >/dev/null
+source ~/.bin/ssh-agent-config

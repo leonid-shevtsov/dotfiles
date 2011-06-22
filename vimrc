@@ -185,7 +185,7 @@ end
 " BUNDLE: git://github.com/tpope/vim-git.git
 " BUNDLE: git://github.com/tpope/vim-markdown.git
 " # BUNDLE: git://github.com/timcharper/textile.vim.git
-" # BUNDLE: git://github.com/kchmck/vim-coffee-script.git
+" BUNDLE: git://github.com/kchmck/vim-coffee-script.git
 " BUNDLE: git://github.com/vim-scripts/Rename.git
 " BUNDLE: git://github.com/vim-scripts/loremipsum.git
 
@@ -200,12 +200,13 @@ end
 " BUNDLE: git://github.com/tpope/vim-haml.git
 " BUNDLE: git://github.com/cakebaker/scss-syntax.vim.git
 " BUNDLE: git://github.com/tpope/vim-cucumber.git
-" BUNDLE: git://github.com/leonid-shevtsov/vim-ruby-debugger.git
+" # BUNDLE: git://github.com/leonid-shevtsov/vim-ruby-debugger.git
 " # BUNDLE: git://github.com/taq/vim-rspec.git
 " BUNDLE: git://github.com/mattn/gist-vim.git
 " BUNDLE: git://github.com/csexton/rvm.vim.git
+" BUNDLE: git://github.com/bogdan/dbext.git
 
 " C++ Programming:
 " BUNDLE: git://github.com/vim-scripts/OmniCppComplete.git
-" BUNDLE: git://github.com/vim-scripts/indexer.tar.gz.git
+" # BUNDLE: git://github.com/vim-scripts/indexer.tar.gz.git
 " BUNDLE: git://github.com/vim-scripts/FSwitch.git
