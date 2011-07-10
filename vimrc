@@ -66,20 +66,20 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Up> gk
 nnoremap <Down> gj
-nnoremap <Home> g<Home>
-nnoremap <End> g<End>
+" nnoremap <Home> g<Home>
+" nnoremap <End> g<End>
 
 vnoremap j gj
 vnoremap k gk
 vnoremap <Up> gk
 vnoremap <Down> gj
-vnoremap <Home> g<Home>
-vnoremap <End> g<End>
+" vnoremap <Home> g<Home>
+" vnoremap <End> g<End>
 
 inoremap <Up> <C-o>gk
 inoremap <Down> <C-o>gj
-inoremap <Home> <C-o>g<Home>
-inoremap <End> <C-o>g<End>
+" inoremap <Home> <C-o>g<Home>
+" inoremap <End> <C-o>g<End>
 
 autocmd BufNewFile,BufRead * set nowrap
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md,*.textile,*.vimwiki set wrap
