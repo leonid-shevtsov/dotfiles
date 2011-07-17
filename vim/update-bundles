@@ -16,11 +16,11 @@ require 'fileutils'
 require 'open-uri'
 
 def is_windows?
-  RUBY_PLATFORM =~ /win32/
+  (RUBY_PLATFORM =~ /win32/) || (RUBY_PLATFORM =~ /mingw32/)
 end
 
 def dotvim *path
-  File.join ENV['HOME'], (is_windows? ? 'vimfiles' : '.vim'), *path
+  File.join ENV['HOME'], (is_windows? ? 'dotfiles/vim' : '.vim'), *path
 end
 
 def vimrc

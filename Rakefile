@@ -85,7 +85,7 @@ def link_file(file, target_file)
 end
 
 def is_windows?
-  RUBY_PLATFORM =~ /win32/
+  (RUBY_PLATFORM =~ /win32/) || (RUBY_PLATFORM =~ /mingw32/)
 end
 
 def skip_file_on_windows(file)
